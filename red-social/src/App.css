@@ -100,20 +100,21 @@ button{
 
 
 *{
+  position: relative;
+  margin: 0px;
+  padding: 0px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .App{
   display: grid;
     
-  grid-template-columns: 100%;
+  grid-template-columns: 20% auto 20%;
   grid-template-rows:  10% auto auto auto ;
   flex-direction: column;
   grid-template-areas: 
-  "nav-bar"
-  "seccion-1"
-  "seccion-2"
-  "seccion-3";  
+  "nav-bar nav-bar nav-bar"
+  "seccion-1 seccion-2 seccion-3";  
 
   width: 100vw;
   height: 100vh;
@@ -121,8 +122,8 @@ button{
   /*min-height: 100vh;
   padding-top: 0%;*/
 }
-/*
-@media screen and (min-width: 1024px)
+
+@media  (max-width: 1050px)
 {
   .App{
     display: grid;
@@ -138,30 +139,44 @@ button{
   }
 
 }
-/* T A B L E T A S
-@media screen and (min-width : 700px) 
+@media  (min-width: 1366px)
 {
   .App{
-    padding: 0%;
-    width: 100vw;
-    min-height: 100vh;
-    padding-top: 0%;
-    display:grid;
-    
-    grid-template-columns: 90% auto;
-    grid-template-rows:  9%  auto;
-    flex-direction: column;
-    color : black;
-  
-    grid-template-areas: 
-    "nav-bar nav-bar"    
-    "seccion-2- seccion-3";
+    display: grid;
+     grid-template-columns: 15% auto 15%;
+     grid-template-rows: 9% auto ;
+     grid-template-areas:      
+      "nav-bar   nav-bar   nav-bar"
+      "seccion-1 seccion-2 seccion-3 ";
+
+     width: 100vw;
+     height: 100vh;
+     
+  }
+
+}
+/* T A B L E T A S*/
+@media  (max-width : 1049px) 
+{
+  .App{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows:  10%  auto;
+           
+     grid-template-areas: 
+     "nav-bar nav-bar"    
+     "seccion-2 seccion-3";
+
+     width: 100vw;
+     height: 100vh;
+
+       
  }
 } 
 
 
-/* mobile 
-@media screen and (min-device-width : 600px) {
+/* mobile
+@media only screen and (max-width: 600px) {
   
 
   .App{
@@ -180,8 +195,8 @@ button{
     "nav-bar"
     
     "secc-2";
- }*/
-
+ }}
+*/
 .nav-bar
 {  
   grid-area: nav-bar; 
@@ -202,12 +217,12 @@ button{
   background-color: rgb(100, 98, 98);  
   border: 1px solid white;
   display: flex;
- /* justify-content: space-evenly;
+ justify-content: space-evenly;
   align-items: flex-start;
   flex-direction: column;
   row-gap: 10px;
   column-gap: 20px;
-  padding: 5%;*/
+  padding: 5%;
  
 
 }
@@ -216,9 +231,9 @@ button{
   display: flex;
   background-color: red;
 
-  /*justify-content: center;
+  justify-content: center;
   align-items: center;
-  padding-top: 3%;*/
+  padding-top: 3%;
 
 }
 .Publicaciones{
@@ -229,11 +244,11 @@ button{
 
 .seccion-3{
   display: flex;
- /* flex-direction: column;
-  /*justify-content: space-evenly;
+ flex-direction: column;
+  justify-content: space-evenly;
   row-gap: 10px;
   column-gap: 20px;
-  align-items: flex-end;*/
+  align-items: flex-end;
   
   background-color: rgb(88, 85, 85);
   grid-area: seccion-3;
