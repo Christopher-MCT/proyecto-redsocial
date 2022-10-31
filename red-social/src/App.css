@@ -82,8 +82,8 @@
   display: grid;
     
   grid-template-columns: 20% auto 20%;
-  grid-template-rows:  10% auto;
-  
+  grid-template-rows:  8% auto;
+  /**40% de 1366 px es 547px**/
   grid-template-areas: 
   "nav-bar nav-bar nav-bar"
   "seccion-1 seccion-2 seccion-3"; 
@@ -96,10 +96,10 @@
 .seccion-1
 {
   grid-area: seccion-1;  
-  background-color: rgb(100, 98, 98);  
-  border: 1px solid white;
+  background-color: #18191a; /**color oficial de feisbu**/ 
+  
   display: flex;
- justify-content: space-evenly;
+  justify-content: space-evenly;
   align-items: flex-start;
   flex-direction: column;
   row-gap: 10px;
@@ -108,25 +108,27 @@
 }
 
 }
+
 .nav-bar
 {  
   grid-area: nav-bar; 
-  background-color: #1a1919;
+  background-color: #242526;
   color:white;
   display: flex;
-  justify-content: start; 
+
   align-items: center;
   /*border-width: thin rgb(255, 255, 255);*/
- padding: 1em;
+  padding: 1em;
   border-bottom-width: thin;
   border-bottom-style:groove;
-  border-bottom-color: rgba(141, 16, 16, 0.466);
+  border-color: aliceblue;
+  
 }
 
 .seccion-2{
   grid-area: seccion-2;
   display: flex;
-  background-color: red;
+  background-color: #18191a;
 
   justify-content: center;
   align-items: center;
@@ -134,9 +136,12 @@
 
 }
 .Publicaciones{
-  width: auto;
-  height: 100%;
-  background-color: blueviolet;
+  width: 500px;
+  height: 150px;
+  color:white;
+  background-color: #242526;
+  
+  border-radius: 15px;
 }
 
 .seccion-3{
@@ -147,10 +152,10 @@
   column-gap: 20px;
   align-items: flex-end;
   
-  background-color: rgb(88, 85, 85);
+  background-color: #18191a;;
   grid-area: seccion-3;
   padding: 5%;
-  border: 1px solid white;
+  
   
 
 }

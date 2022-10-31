@@ -13,11 +13,7 @@ function App() {
       </div>
 
       <div className="seccion-1">
-          <button name="button">Click 1</button>
-          <button name="button">Click 2</button>
-          <button name="button">Click 3</button>
-          <button name="button">Click 5</button>
-          <button name="button">Click 6</button>
+          
       </div>
 
       <div className="seccion-2">
