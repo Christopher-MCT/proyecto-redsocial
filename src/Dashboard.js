@@ -5,15 +5,14 @@ import Forms from "./Componentes/TaskMain";
 import "./Dashboard.css";
 import { auth, db, logout } from "./firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
-import {useSelector} from 'react-redux'
+
 import TaskList from "./Componentes/TaskList";
 
 function Dashboard() {
   
   /****** REDUX START ***** */ 
 
-  const taskState =  useSelector(state => state.tasks)
-  console.log(taskState)
+
 
 /****** REDUX END ***** */ 
 const [user, loading, /*error*/] = useAuthState(auth);
@@ -25,8 +24,8 @@ const [user, loading, /*error*/] = useAuthState(auth);
       const doc = await getDocs(q);
       const data = doc.docs[0].data();
       setName(data.name);
-    } catch (err) {
-      console.error(err);
+    } catch (error) {
+      console.error(error);
       alert("An error occured while fetching user data");
     }
   };
