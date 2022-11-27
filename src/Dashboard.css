@@ -92,7 +92,7 @@
  {
   grid-area: seccion-2;
   display: flex;
-  /*background-color: #18191a;*/
+  /*background-color: #18191a;***/
   background-color: RED;
   align-items:flex-start;
   justify-content: center ;
