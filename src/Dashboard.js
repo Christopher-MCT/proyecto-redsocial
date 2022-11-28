@@ -11,11 +11,7 @@ import TaskList from "./Componentes/TaskList";
 
 function Dashboard() {
   
-  /****** REDUX START ***** */ 
-
-
-
-/****** REDUX END ***** */ 
+ 
 const [user, loading, /*error*/] = useAuthState(auth);
   const [name, setName] = useState("");
   const navigate = useNavigate();
