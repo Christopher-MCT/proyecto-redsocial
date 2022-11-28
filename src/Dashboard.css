@@ -92,10 +92,10 @@
  {
   grid-area: seccion-2;
   display: flex;
-  /*background-color: #18191a;***/
-  background-color: RED;
-  align-items:flex-start;
-  justify-content: center ;
+  background-color: #18191a;
+  align-items: center;
+  justify-content: top ;
+ 
   flex-direction: column;
  
 
