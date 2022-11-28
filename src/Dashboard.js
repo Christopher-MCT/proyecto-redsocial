@@ -5,6 +5,7 @@ import Forms from "./Componentes/TaskMain";
 import "./Dashboard.css";
 import { auth, db, logout } from "./firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import TaskList from "./Componentes/TaskList";
 
@@ -44,7 +45,7 @@ const [user, loading, /*error*/] = useAuthState(auth);
           </form>
           <div className="dashboard__container">
          <button className="dashboard__btn" onClick={logout}>
-          Logout
+          Log-out
          </button>
        </div>
       </div>
@@ -54,8 +55,8 @@ const [user, loading, /*error*/] = useAuthState(auth);
         </div>
 
         <div className="seccion-2">
-          <Forms/>
-          <TaskList/>
+        <Forms/>
+        <TaskList/>
         </div>
 
         <div className="seccion-3">
