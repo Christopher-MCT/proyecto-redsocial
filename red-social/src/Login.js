@@ -3,6 +3,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth, logInWithEmailAndPassword, signInWithGoogle } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import "./Login.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons'
+import Register from "./Register";
+
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,6 +21,7 @@ function Login() {
   }, [user, loading, navigate]);
   return (
     <div className="login">
+      <div className="matt">
       <div className="login__container">
         <input
           type="text"
@@ -32,21 +37,32 @@ function Login() {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Contraseña"
         />
+        <div className="texto1">
+          <Link to="/reset" className="link">¿Olvidaste tu contraseña?</Link>
+        </div>
         <button
           className="login__btn"
           onClick={() => logInWithEmailAndPassword(email, password)}
         >
-          Iniciar sesión
+          <FontAwesomeIcon icon="fa-brands fa-google" />Iniciar sesión
         </button>
+        <div className="texto2">
+          ¿Aun no tienes cuenta?
+        </div>  
+        <button className="crearCuenta">
+        <Link to="/register" className="link3">Crea una cuenta ahora</Link>
+        </button>
+        <div className="O">
+          ó
+        </div>
         <button className="login__btn login__google" onClick={signInWithGoogle}>
-          Iniciar sesión con google
+        <FontAwesomeIcon icon={faGoogle}/> Iniciar sesión con google
         </button>
-        <div>
-          <Link to="/reset">¿Olvidaste tu contraseña?</Link>
-        </div>
-        <div>
-          ¿Aun no tienes una cuenta? <Link to="/register">Crear cuenta nueva. </Link> 
-        </div>
+
+        
+        
+       
+      </div>
       </div>
     </div>
   );

@@ -2,6 +2,8 @@ import "./Register.css";
 import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons'
 
 import {
   auth,
@@ -26,12 +28,14 @@ const [user, loading, error] = useAuthState(auth);
   }, [user, loading, navigate ]);
   return (
     <div className="register">
+      <div className="matt">
       <div className="register__container">
         <input
           type="text"
           className="register__textBox"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          
           placeholder="Nombre completo"
         />
         <input
@@ -55,11 +59,15 @@ const [user, loading, error] = useAuthState(auth);
           className="register__btn register__google"
           onClick={signInWithGoogle}
         >
-          Registrarse con Google
+          <FontAwesomeIcon icon={faGoogle}/> Registrarse con Google
         </button>
         <div>
-          ¿Ya tienes una cuenta?<Link to="/">Iniciar sesión</Link>
+          ¿Ya tienes una cuenta?
         </div>
+        <div>
+        <Link to="/" className="link1"> Iniciar sesión</Link>
+        </div>
+      </div>
       </div>
     </div>
   );
