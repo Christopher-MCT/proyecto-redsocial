@@ -13,14 +13,17 @@ function TaskList ( ) {
 
 
     return (
-        <div className='text'>
 
+        <div className='Casilla-publicacion'>
+        <div className='image-user'></div>
+        <div>Nombre usuario</div> 
          {tasks.map(task => (
             <div key={task.id}>
-             <p>{task.title}</p>
-             <button onClick={() => handleDelete(task.id)}>Delete</button>
+             <p className='Text-Area'>{task.title}</p>
+             <button className='Opc-edicion' onClick={() => handleDelete(task.id)}>Delete</button>
             </div>
          ))}
+         <div className='seccion-like'></div>
         </div>
     )
 }

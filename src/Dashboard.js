@@ -53,6 +53,7 @@ const [user, loading, /*error*/] = useAuthState(auth);
         <div className="seccion-2">
         <Forms/>
         <TaskList/>
+        
         </div>
 
         <div className="seccion-3">

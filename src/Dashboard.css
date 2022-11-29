@@ -95,7 +95,8 @@
   background-color: #18191a;
   align-items: center;
   justify-content: top ;
- 
+  row-gap: 15px;
+   
   flex-direction: column;
  
 
